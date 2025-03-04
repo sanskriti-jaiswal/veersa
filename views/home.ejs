@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MediGo is a healthcare platform that helps you find & book appointments with top doctors near you in just a few taps.">
+    <meta name="keywords" content="MediGo, Healthcare, Doctor, Appointment, Booking, Health, Medical, Clinic, Hospital">
+    <title>MediGo | Home</title>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="/CSS/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- JavaScript -->
+    <script src="/Javascript/global.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Dynamic Styles -->
+    <style>
+        .custom-accent {
+            color: <%=accent_color %>;
+        }
+
+        .custom-alt-accent {
+            background-color: <%=alt_accent_color %>;
+        }
+
+        .light-mode {
+            background-color: <%= text_color %> !important;
+            color: black !important;
+        }
+
+        .light-mode div {
+            color: black !important;
+        }
+
+        .light-mode button {
+            background-color: black;
+        }
+
+        .light-mode nav a {
+            color: black !important;
+        }
+
+        .light-mode nav a:hover {
+            color: <%=accent_color %> !important;
+        }
+    </style>
+</head>
+
+<body class="bg-[<%= bg_color %>] text-[<%= text_color %>]">
+    <!-- Header -->
+    <header id="navbar" style="transition: background-color 0.4s ease-in-out, color 0.4s ease-in-out;"
+        class="w-full shadow-lg px-6 py-4 flex justify-between items-center backdrop-blur-lg fixed top-0 left-0 z-50">
+        <div class="font-semibold text-3xl custom-accent">MediGo®</div>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden md:flex space-x-6">
+            <a href="#about" class="text-gray-300 hover:text-[<%= accent_color %>] transition">Project</a>
+            <a href="#services" class="text-gray-300 hover:text-[<%= accent_color %>] transition">Our Team</a>
+            <a href="#blog" class="text-gray-300 hover:text-[<%= accent_color %>] transition">Github</a>
+            <a href="#contact" class="text-gray-300 hover:text-[<%= accent_color %>] transition">Terms</a>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-white focus:outline-none">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <nav id="mobile-menu"
+        class="hidden fixed top-16 left-0 w-screen h-screen bg-black/40 backdrop-blur-lg text-white flex flex-col items-center space-y-4 py-6 transition-all duration-300 opacity-0 transform -translate-y-10">
+        <a href="#about" class="text-gray-300 hover:text-[<%= accent_color %>] transition">Project</a>
+        <a href="#services" class="text-gray-300 hover:text-[<%= accent_color %>] transition">Our Team</a>
+        <a href="#blog" class="text-gray-300 hover:text-[<%= accent_color %>] transition">Github</a>
+        <a href="#contact" class="text-gray-300 hover:text-[<%= accent_color %>] transition">Terms</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="flex items-center justify-center h-screen text-white text-center flex-col px-4">
+        <section>
+            <div class="flex justify-center space-x-2 mb-6">
+                <div class="flex -space-x-1">
+                    <img src="/images/avatar_1.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="User" />
+                    <img src="/images/avatar_2.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="User" />
+                    <img src="/images/avatar_3.jpg" class="w-10 h-10 rounded-full border-2 border-white" alt="User" />
+                </div>
+                <span class="text-sm text-[<%= accent_color %>] mt-[7.8px]">+15K downloads</span>
+            </div>
+        </section>
+
+        <h1 class="text-3xl md:text-4xl font-bold mt-3">
+            Your Health, <i class="text-[<%= bg_color %>] custom-alt-accent p-1 pr-3 rounded-md">Your Schedule</i> -
+            Anytime, Anywhere!
+        </h1>
+        <p class="text-lg leading-relaxed mt-3 max-w-[600px]">
+            Find & book appointments with
+            <span class="underline decoration-[<%= accent_color %>] underline-offset-4">top doctors</span>
+            near you in just a few taps.
+        </p>
+
+        <button
+            class="bg-[<%= accent_color %>] text-black hover:bg-[#5ff275] px-6 py-3 rounded-full flex items-center space-x-2 mt-6 transition">
+            <span>Download now</span>
+            <i data-lucide="download" class="w-4 h-4"></i>
+        </button>
+    </div>
+
+    <!-- Project Section -->
+    <div id="project" class="h-screen w-screen bg-[<%= text_color  %>]"></div>
+
+    </div>
+</body>
+
+</html>

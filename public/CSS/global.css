@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Remix";
+  src: url("/fonts/Remix.woff2") format("woff2");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Remix-md";
+  src: url("/fonts/Remix-md.woff2") format("woff2");
+  font-style: normal;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+
+h1 {
+  font-family: 'Remix-md', sans-serif;
+}
+
+a,
+p {
+  font-family: 'Remix', sans-serif;
+}
